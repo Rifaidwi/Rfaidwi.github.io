@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="Folder CSS/index.css" />
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <section>
+        <!--- navigation --->
+        <nav>
+            <a href="#" class="logo">Pemrograman WEB dengan HTML</a>
+            <!--- menu --->
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="profil.html" id="show-profile">Profile</a></li>
+                <li><a href="about.html" id="show-about">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="mailto:rifaidwisetiyawan12@gamail.com">Contact_us</a></li>
+            </ul>
+            <div id="profile-container"></div>
+            <script>
+                $(document).ready(function () {
+                    $("#show-profile").click(function () {
+                        $.ajax({
+                            url: "profil.html",
+                            success: function (result) {
+                                $("#profile-container").html(result);
+                            }
+                        });
+                    });
+                });
+            </script>
+            <div id="about-container"></div>
+            <script>
+                $(document).ready(function () {
+                    $("#show-about").click(function () {
+                        $.ajax({
+                            url: "about.html",
+                            success: function (result) {
+                                $("#about-container").html(result);
+                            }
+                        });
+                    });
+                });
+            </script>
+            <div id="gallery-container"></div>
+            <script>
+                $(document).ready(function () {
+                    $("show=gallery").click(function () {
+                        $.ajax({
+                            url: "gallery.html",
+                            success: function (reult) {
+                                $("#gallery-container").html(result);
+                            }
+                        });
+                    });
+                });
+            </script>
+        </nav>
+        <div class="text-container">
+            <p>Hai,</p>
+            <p>I&#8217;M RIFAI</p>
+            <p>TEKNOLOGI INFORMATIKA</p>
+            <p>Terimakasih anda telah bergabung dan berkunjung pada situs kami,
+                <br>kami harap anda memperoleh informasi yang anda inginkan dan anda cari
+                Situs ini berisi tentang informasi <br>sekitar materi yang berhubungan dengan,
+                programming web diantaranya : HTML, CSS, PHP, MySql dan materi <br>artikel lain sekitar web.
+            </p>
+        </div>
+        <!-- model -->
+        <img alt="model" class="model" src="Folder Gambar/T.avif">
+    </section>
+    <!-- footer -->
+    <footer>
+        <p>Apakah Isi Dari Web Ini Bisa membantu anda ?</p>
+        <p>Jika ada yang Ingin di tanyakan silahkan kontak WhatsApp, Facebook, Instagram di bawah ini atau disamping
+            kanan, dan bisa juga melalui email di pojok kanan atas</p>
+        <div class="social-icons">
+            <a href="https://wa.me/083879803931"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/Rifai Dwi Setiyawan"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/rifaidwi2656"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="copyright"></p>
+    </footer>
+    <div class="social">
+        <a href="https://wa.me/083879803931"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/Rifai Dwi Setiyawan"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/rifaidwi2656"><i class="fab fa-instagram"></i></a>
+    </div>
+</body>
+
+</html>
